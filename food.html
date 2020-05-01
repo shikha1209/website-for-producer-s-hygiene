@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>food</title>
+    <script type="text/javascript">
+      var citiesByState = {
+        "Andaman and Nicobar Islands" : ["Port Blair"],
+
+   "Andhra Pradesh" : ["Adoni", "Amaravati", "Anantapur","Chandragiri","Chittoor","Dowlaiswaram", "Eluru","Guntur","Kadapa"," Kakinada","Kurnool","Machilipatnam","Nagarjunakoṇḍa","Rajahmundry","Srikakulam","Tirupati","Vijayawada","Visakhapatnam","Vizianagaram","Yemmiganur"],
+
+   "Arunachal Pradesh" : ["Itanagar"],
+
+   Assam : ["Dhuburi","Dibrugarh","Dispur","Guwahati","Jorhat","Nagaon","Sibsagar","Silchar","Tezpur","Tinsukia"],
+
+   Bihar : ["Ara","Baruni","Begusarai","Bettiah","Bhagalpur","Bihar Sharif","Bodh Gaya","Buxar","Chapra","Darbhanga","Dehri","Dinapur Nizamat","Gaya","Hajipur","Jamalpur","Katihar","Madhubani","Motihari","Munger","Muzaffarpur","Patna","Purnia","Pusa","Saharsa","Samastipur","Sasaram","Sitamarhi","Siwan"],
+
+   Chandigarh : ["Chandigarh"],
+
+   Chhattisgarh : ["Ambikapur","Bhilai","Bilaspur","Dhamtari","Durg","Jagdalpur","Raipur","Rajnandgaon"],
+
+   "Dadra Nagar Haveli and Daman Diu" : ["Silvassa","Daman","Diu"],
+
+   Goa : ["Madgaon","Panaji"],
+
+   Gujarat : ["Ahmadabad","Amreli","Bharuch","Bhavnagar","Bhuj","Dwarka","Gandhinagar","Godhra","Jamnagar","Junagadh","Kandla","Khambhat","Kheda","Mahesana","Morvi","Nadiad","Navsari","Okha","Palanpur","Patan","Porbandar","Rajkot","Surat","Surendranagar","Valsad","Veraval"],
+
+   Haryana : ["Ambala","Bhiwani","Chandigarh","Faridabad","Firozpur Jhirka","Gurgaon","Hansi","Hisar","Jind","Kaithal","Karnal","Kurukshetra","Panipat","Pehowa","Rewari","Rohtak","Sirsa","Sonipat"],
+
+   "Himachal Pradesh" : ["Bilaspur","Chamba","Dalhousie","Dharmshala","Hamirpur","Kangra","Kullu","Mandi","Nahan","Shimla","Una"],
+
+   "Jammu and Kashmir" : ["Anantnag","Baramula","Doda","Gulmarg","Jammu","Kathua","Leh","Punch","Rajauri","Srinagar","Udhampur"],
+
+   Jharkhand : ["Bokaro","Chaibasa","Deoghar","Dhanbad","Dumka","Giridih","Hazaribag","Jamshedpur","Jharia","Rajmahal","Ranchi","Saraikela"],
+
+   Karnataka : ["Badami","Ballari","Bangalore","Belgavi","Bhadravati","Bidar","Chikkamagaluru","Chitradurga","Davangere","Halebid","Hassan","Hubballi-Dharwad","Kalaburagi","Kolar","Madikeri","Mandya","Mangaluru","Mysuru","Raichur","Shivamogga","Shravanabelagola","Shrirangapattana","Tumkuru"],
+
+   Kerala : ["Alappuzha","Badagara","Idukki","Kannur","Kochi","Kollam","Kottayam","Kozhikode","Mattancheri","Palakkad","Thalassery","Thiruvananthapuram","Thrissur"],
+
+   Lakshadweep : ["Agatti Island","Amini","Andrott","Bangaram Atoll","Bitra","Chetlat Island","Kadmat Island","Kalpeni","Kavaratti","Kiltan","Minicoy"],
+
+   Ladakh : ["Ladakh"],
+
+   "Madhya Pradesh" : ["Balaghat","Barwani","Betul","Bharhut","Bhind","Bhojpur","Bhopal","Burhanpur","Chhatarpur","Chhindwara","Damoh","Datia","Dewas","Dhar","Guna","Gwalior","Hoshangabad","Indore","Itarsi","Jabalpur","Jhabua","Khajuraho","Khandwa","Khargon","Maheshwar","Mandla","Mandsaur","Mhow","Morena","Murwara","Narsimhapur","Narsinghgarh","Narwar","Neemuch","Nowgong","Orchha","Panna","Raisen","Rajgarh","Ratlam","Rewa","Sagar","Sarangpur","Satna","Sehore","Seoni","Shahdol","Shajapur","Sheopur","Shivpuri","Ujjain","Vidisha"],
+
+   Maharashtra: ["Ahmadnagar","Akola","Amravati","Aurangabad","Bhandara","Bhusawal","Bid","Buldana","Chandrapur","Daulatabad","Dhule","Jalgaon","Kalyan","Karli","Kolhapur","Mahabaleshwar","Malegaon","Matheran","Mumbai","Nagpur","Nanded","Nashik","Osmanabad","Pandharpur","Parbhani","Pune","Ratnagiri","Sangli","Satara","Sevagram","Solapur","Thane","Ulhasnagar","Vasai-Virar","Wardha","Yavatmal"],
+
+   Manipur : ["Imphal"],
+
+   Meghalaya : ["Cherrapunji","Shillong"],
+
+   Mizoram : ["Aizawl","Lunglei"],
+
+   Nagaland : ["Kohima","Mon","Phek","Wokha","Zunheboto"],
+
+   "New Delhi" : ["Delhi","New Delhi"],
+
+   Odisha: ["Balangir","Baleshwar","Baripada","Bhubaneswar","Brahmapur","Cuttack","Dhenkanal","Keonjhar","Konark","Koraput","Paradip","Phulabani","Puri","Sambalpur","Udayagiri"],
+
+   Puducherry : ["Karaikal","Mahe","Puducherry","Yanam"],
+
+   Punjab : ["Amritsar","Batala","Chandigarh","Faridkot","Firozpur","Gurdaspur","Hoshiarpur","Jalandhar","Kapurthala","Ludhiana","Nabha","Patiala","Rupnagar","Sangrur"],
+
+   Rajasthan : ["Abu","Ajmer","Alwar","Amer","Barmer","Beawar","Bharatpur","Bhilwara","Bikaner","Bundi","Chittaurgarh","Churu","Dhaulpur","Dungarpur","Ganganagar","Hanumangarh","Jaipur","Jaisalmer","Jalor","Jhalawar","Jhunjhunu","Jodhpur","Kishangarh","Kota","Merta","Nagaur","Nathdwara","Pali","Phalodi","Pushkar","Sawai Madhopur","Shahpura","Sikar","Sirohi","Tonk","Udaipur"],
+
+   Sikkim : ["Gangtok","Gyalsing","Lachung","Mangan"],
+
+   "Tamil Nadu" : ["Arcot","Chengalpattu","Chennai","Chidambaram","Coimbatore","Cuddalore","Dharmapuri","Dindigul","Erode","Kanchipuram","Kanniyakumari","Kodaikanal","Kumbakonam","Madurai","Mamallapuram","Nagappattinam","Nagercoil","Palayankottai","Pudukkottai","Rajapalaiyam","Ramanathapuram","Salem","Thanjavur","Tiruchchirappalli","Tirunelveli","Tiruppur","Tuticorin","Udhagamandalam","Vellore"],
+
+   Telangana : ["Hyderabad","Karimnagar","Khammam","Mahbubnagar","Nizamabad","Sangareddi","Warangal"],
+
+   Tripura : ["Agartala"],
+
+   "Uttar Pradesh" : ["Agra","Aligarh","Amroha","Ayodhya","Azamgarh","Bahraich","Ballia","Banda","Bara Banki","Bareilly","Basti","Bijnor","Bithur","Budaun","Bulandshahr","Deoria","Etah","Etawah","Faizabad","Farrukhabad-cum-Fatehgarh","Fatehpur","Fatehpur Sikri","Ghaziabad","Ghazipur","Gonda","Gorakhpur","Hamirpur","Hardoi","Hathras","Jalaun","Jaunpur","Jhansi","Kannauj","Kanpur","Lakhimpur","Lalitpur","Lucknow","Mainpuri","Mathura","Meerut","Mirzapur-Vindhyachal","Moradabad","Muzaffarnagar","Partapgarh","Pilibhit","Prayagraj","Rae Bareli","Rampur","Saharanpur","Sambhal","Shahjahanpur","Sitapur","Sultanpur","Tehri","Varanasi"],
+
+   Uttarakhand : ["Almora","Dehra Dun","Haridwar","Mussoorie","Nainital","Pithoragarh"],
+
+   "West Bengal" : ["Alipore","Alipur Duar","Asansol","Baharampur","Bally","Balurghat","Bankura","Baranagar","Barasat","Barrackpore","Basirhat","Bhatpara","Bishnupur","Budge Budge","Burdwan","Chandernagore","Darjiling","Diamond Harbour","Dum Dum","Durgapur","Halisahar","Haora","Hugli","Ingraj Bazar","Jalpaiguri","Kalimpong","Kamarhati","Kanchrapara","Kharagpur","Koch Bihar","Kolkata","Krishnanagar","Malda","Midnapore","Murshidabad","Navadwip","Palashi","Panihati","Purulia","Raiganj","Santipur","Shantiniketan","Shrirampur","Siliguri","Siuri","Tamluk","Titagarh"],
+      }
+      function makeSubmenu(value) {
+      if(value.length==0) document.getElementById("citySelect").innerHTML = "<option></option>";
+      else {
+      var citiesOptions = "";
+      for(cityId in citiesByState[value]) {
+      citiesOptions+="<option>"+citiesByState[value][cityId]+"</option>";
+      }
+      document.getElementById("citySelect").innerHTML = citiesOptions;
+      }
+      }
+      
+      function resetSelection() {
+      document.getElementById("countrySelect").selectedIndex = 0;
+      document.getElementById("citySelect").selectedIndex = 0;
+      }
+      </script>
+    <style>
+        *{
+    margin: 2px;
+    padding: 0;
+    font-family: Century Gothic;
+    text-align: center;
+    }
+    
+    body{
+    background-size: cover;
+    background-position: center;
+    }
+    
+    .header {
+      font-family: cursive;
+      color: #f2f2f2;
+      text-align: center;
+      text-shadow: 2px 2px 5px red;
+      background-image: linear-gradient(to top, rgba(255,0,0,0), rgb(6, 161, 250));
+    }
+    
+    .header h1 {
+      font-size: 30px;
+    }
+  
+    .topnav {
+      overflow: hidden;
+      background-color:transparent;
+    }
+    .logo img{
+      float: left;
+      width: 50px;
+      height:60px;
+      }
+      .logo h2{
+        float: left;
+        width: 50px;
+        height:60px;
+        }
+    /* Style the topnav links */
+    .topnav a {
+      font-size: 20px;
+      float: left;
+      display: block;
+      color: rgb(6, 161, 250);
+      text-align: center;
+      padding: 10px 12px;
+      text-decoration: none;
+    }
+   
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .title{
+    margin-top: 50px;
+    color:rgb(6, 161, 250);
+    }
+    
+    .title h1{
+    font-size: 32px;
+    line-height: 10px;
+    }
+
+.title h2{
+font-size: 16px;
+}
+
+
+.form{
+margin-top:50px;
+margin-left: 50px;
+margin-right: 50px;
+margin-bottom: 50px;
+}
+
+.form-control{
+width: 600px;
+background: transparent;
+border:none;
+border-bottom: 1px solid gray;
+font-size: 18px;
+margin-bottom: 16px;
+}
+
+
+input{
+height:45px;
+}
+
+form .submit{
+background-color: #ff5722;
+border-color: transparent;
+color: #fff;
+font-size: 20px;
+letter-spacing: 2px;
+height: 50px;
+margin-top:20px;
+transition: 0.4s ease;
+}
+
+form .submit:hover{
+cursor: pointer;
+background-color: #f44336;
+}
+
+.fa {
+      content: icon;
+      padding: 10px;
+      font-size: 10px;
+      width: 15px;
+      text-align: center;
+      text-decoration: none;
+      margin: 3px 2px;
+      border-radius: 50%;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    
+    .fa-instagram {
+      background: #db04ad;
+      color: white;
+    }
+    
+.footer {
+  font-size: 10px;
+      text-align: center;
+      background-color:rgb(6, 161, 250);
+      margin-top: 20px;
+      color: white;
+    }
+    </style>
+</head>
+
+<body>
+   
+<div class="header">
+    <div class="logo">
+      <img src="1.png">
+      <h2>Mind Hackers</h2>
+      </div>
+    <h1>A Commitment to Community</h1>
+    <p>The Spirit to heal. The Spirit to care</p>
+  </div>
+  
+  <div class="topnav">
+    <a href="faq.html" style="float:right"><b>FAQs</a></b>
+   <a href="contact.html" style="float:right"><b>Contact Us</a></b>
+   <a href="about-page.html" style="float:right"><b>About Us</a></b>
+   <a href="gallery.html" style="float:right"><b>Gallery</a></b>
+   <a href="home.html" style="float:right" class="active"><b>Home</a></b>
+ </div>
+
+<div class="title">
+<h1>FOOD DONATION FORM</h1><br>
+<h3>Kindly fill the details</h3>
+</div>
+
+<div class="box">
+<form>
+<input type="text" name="username" class="form-control" placeholder="Enter Your Name" required><br><br>
+<input type="tel" name="tel" class="form-control"  placeholder="Enter Your Phone Number" maxlength="10" required><br><br>
+<input type="email" name="te" class="form-control"  placeholder="Enter Your Mail ID"  required><br><br>
+<input type="tel" name="tele" class="form-control"  placeholder="Enter Your Aadhar Number" maxlength="12" required><br><br>
+<textarea name="QUERY" class="form-control" placeholder="Enter your address" rows="3" required></textarea><br><br>
+<div onload="resetSelection()">
+<select id="countrySelect" size="1" class="form-control" onchange="makeSubmenu(this.value)">
+  <option value="" disabled selected>Choose State</option>
+  <option >Andaman and Nicobar Islands</option>
+  <option>Andhra Pradesh</option>
+  <option>Arunachal Pradesh</option>
+  <option>Assam</option>
+  <option>Bihar</option>
+  <option>Chandigarh</option>
+  <option>Chhattisgarh</option>
+  <option>Dadra Nagar Haveli and Daman Diu</option>
+  <option>Goa</option>
+  <option>Gujarat</option>
+  <option>Haryana</option>
+  <option>Himachal Pradesh</option>
+  <option>Jammu and Kashmir</option>
+  <option>Jharkhand</option>
+  <option>Karnataka</option>
+  <option>Kerala</option>
+  <option>Lakshadweep</option>
+  <option>Ladakh</option>
+  <option>Madhya Pradesh</option>
+  <option>Maharashtra</option>
+  <option>Manipur</option>
+  <option>Meghalaya</option>
+  <option>Mizoram</option>
+  <option>Nagaland</option>
+  <option>New Delhi</option>
+  <option>Odisha</option>
+  <option>Puducherry</option>
+  <option>Punjab</option>
+  <option>Rajasthan</option>
+  <option>Sikkim</option>
+  <option>Tamil Nadu</option>
+  <option>Telangana</option>
+  <option>Tripura</option>
+  <option>Uttar Pradesh</option>
+  <option>Uttarakhand</option>
+  <option>West Bengal</option>
+  </select>
+  <select id="citySelect" size="1" class="form-control" >
+  <option value="" disabled selected>Choose City</option>
+  <option></option>
+  </select>
+</div>
+<textarea name="QUERY" class="form-control" placeholder="Enter the Item List You want to Donate" rows="3" required></textarea><br><br>
+<input type="submit" name="" class="form-control submit" value="SEND QUERY">
+</form>
+</div>
+ </div>
+</header>
+<div class="footer">
+  <h3>Follow Us</h3>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+  <p>In case you have any queries, please reach out to us at help@mind_hackers.com</p>
+  <p>© 2020 Mind Hackers. All Rights Reserved</p>
+  </div>
+</body>
+</html>
+
